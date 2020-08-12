@@ -20,19 +20,7 @@ class App extends Component {
     blogs: [],
     category: [],
     toggle: false,
-    currentRoute: {},
-    currentCategory: { _id: "" },
   };
-
-  async componentDidMount() {
-    const { data: blog } = await Axios.get("/posts/v1");
-    const { data: category } = await Axios.get("/category/v1");
-    const blogs = blog["data"];
-    this.setState({
-      blogs,
-      category: [{ _id: "", name: "All", icons: "clear_all" }, ...category],
-    });
-  }
 
   handlerToggle = () => {
     let { toggle } = this.state;
@@ -46,59 +34,19 @@ class App extends Component {
     this.setState({ toggle });
   };
 
-  handlerLink = (link) => {
-    this.setState({ currentRoute: link });
-  };
-
-  handlerCategory = (categoryId) => {
-    const { currentCategory } = this.state;
-    currentCategory._id = categoryId;
-    this.setState({ currentCategory });
-  };
-
-  handlerSearch = ({ currentTarget: input }) => {
-    let blogs = [...this.state.blogs];
-    blogs = blogs.filter((event) => {
-      return event.title.toLowerCase().includes(input.value.toLowerCase());
-    });
-    this.setState({ blogs });
-  };
-
   render() {
-    const {
-      toggle,
-      blogs,
-      category,
-      currentRoute,
-      currentCategory,
-    } = this.state;
-    const links = [
-      { id: 0, links: "/", name: "Home" },
-      { id: 1, links: "/blogs", name: "Blog" },
-      { id: 2, links: "/about", name: "About" },
-      { id: 3, links: "/client-councelling", name: "Client Councelling" },
-    ];
-
-    const filtered = blogs.filter(
-      (blog) => blog.category._id === currentCategory._id
-    );
-    const allBlogs = currentCategory && currentCategory._id ? filtered : blogs;
+    const { toggle } = this.state;
 
     return (
       <div className="text-secondary ov-x">
         <div className="d-flex">
           <div className="bg-light">
-            <Sidebar
-              onLinkToggle={this.handlerBodyToggle}
-              currentRoute={currentRoute}
-              toggle={toggle}
-            />
+            <Sidebar onLinkToggle={this.handlerBodyToggle} toggle={toggle} />
           </div>
           <div className="w-100">
             <Navbar
               onLinkToggle={this.handlerBodyToggle}
               onToggle={this.handlerToggle}
-              currentRoute={currentRoute}
             />
             <div
               className={toggle ? "opacity" : ""}
@@ -114,19 +62,7 @@ class App extends Component {
                   path="/client-councelling"
                   component={ClientCounceling}
                 />
-                <Route
-                  path="/blogs"
-                  render={(props) => (
-                    <Blogs
-                      onDelete={this.handlerDelete}
-                      onChange={this.handlerSearch}
-                      blogs={allBlogs}
-                      category={category}
-                      currentCategory={currentCategory}
-                      onCategory={this.handlerCategory}
-                    />
-                  )}
-                />
+                <Route path="/blogs" component={Blogs} />
                 <Route path="/" exact component={Body} />
               </Switch>
             </div>

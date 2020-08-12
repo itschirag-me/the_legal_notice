@@ -6,12 +6,13 @@ const CardAbout = ({ name, description, image, profile, quotes, title }) => {
       <img
         src={require("../assets/image/legal-contract-1024x640.jpg")}
         className="card-img-top border-0"
-        alt="..."
+        alt="Card background"
       />
       <div className="mx-auto m-nt w-img">
         <img
           className="w-img bg-white border-1 rounded-circle shadow"
           src={require(`../assets/image/profile-img/${profile}.jpg`)}
+          alt={name}
         />
       </div>
       <div className="card-body text-center pt-2">

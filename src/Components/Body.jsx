@@ -3,7 +3,6 @@ import tnl_2 from "./assets/image/tln_02.jpg";
 import SomeWork from "./SomeWork";
 import Home from "./partials/Home";
 import Panel from "./Panel";
-import LegalAdvice from "./LegalAdvice";
 
 class Body extends Component {
   state = {};
@@ -62,7 +61,9 @@ class Body extends Component {
       <div>
         <Home image={tnl_2} />
         <SomeWork data={data} />
-        <Panel panel={panel} />
+        <div className="px-3">
+          <Panel panel={panel} />
+        </div>
       </div>
     );
   }
