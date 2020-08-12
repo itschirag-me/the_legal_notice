@@ -1,0 +1,123 @@
+.ov-x {
+  overflow-x: hidden;
+}
+#sidebar {
+  max-width: 255px;
+  min-width: 255px;
+  height: 100vh;
+  transition: all 0.4s ease;
+}
+
+#wrapper {
+  max-width: 255px;
+  min-width: 255px;
+  height: 100vh;
+  transition: all 0.4s ease;
+}
+
+.toggle {
+  margin-left: -255px;
+}
+
+.focus-none:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.focus-none:active {
+  outline: none;
+  box-shadow: none;
+}
+
+.opacity {
+  opacity: 0.3;
+}
+
+.opacity-1 {
+  background: #00000070;
+}
+
+.text-blue {
+  color: #11abd1 !important;
+}
+
+.bg-blue {
+  background: linear-gradient(90deg, #00bff0 0%, #11abd1 50%, #128caa 100%);
+}
+
+.row-4 {
+  max-height: 510px;
+  min-height: 510px;
+}
+
+.row-3 {
+  max-height: 330px;
+  min-height: 330px;
+}
+
+.p-35 {
+  padding: 30%;
+}
+
+.bg-about {
+  background-image: url("../image/bg_about.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.hr-custom {
+  border : 0.4px solid white !important;
+}
+
+.w-img {
+  width : 100px;
+  height : 100px;
+}
+
+.m-nt {
+  margin-top : -50px;
+}
+
+.btn-blue {
+  background: linear-gradient(90deg, #00bff0 0%, #11abd1 50%, #128caa 100%);
+}
+
+.w-btn {
+  width: 100px;
+  height: 100px;
+}
+
+.text-btn {
+  font-size: x-small;
+}
+
+.icons-size {
+  font-size: 23px !important;
+}
+
+.tansition-04 {
+  transition: all 0.4s ease;
+}
+
+.focus:focus {
+  background-color: white;
+  color : #6b757d;
+}
+
+.bg-legal {
+  background-image: url("../image/legal-contract-1024x640.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.bg-drafting {
+  background-image: url("../image/Legal_Drafting.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.bg-maxims {
+  background-image: url("../image/Legal-Maxims.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
