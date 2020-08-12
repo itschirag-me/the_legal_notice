@@ -59,7 +59,7 @@ class Blogs extends Component {
                     </a>
                   </div> */}
                   <div className="h3 text-center">{blog.title}</div>
-                  <div className="h5 text-justiry p-lg-3">{blog.posts}</div>
+                  <div className="h5 text-justify p-lg-3">{blog.posts}</div>
                   <div className="text-right">
                     <i>
                       {blog.category.name} by <b>{blog.name}</b>
