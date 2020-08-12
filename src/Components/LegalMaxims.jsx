@@ -3,6 +3,7 @@ import Search from "./common/Search";
 
 class LegalMaxims extends Component {
   state = {
+    searchQuery : "",
     laws: [
       {
         _id: 0,
@@ -64,23 +65,24 @@ class LegalMaxims extends Component {
     ],
   };
 
-  handlerSearch = ({ currentTarget: input }) => {
-    let laws = [...this.state.laws];
-    laws = laws.filter((event) => {
-      return event.lawTitle.toLowerCase().includes(input.value.toLowerCase());
-    });
-    this.setState({ laws });
+  handlerSearch = query => {
+    this.setState({ searchQuery : query });
   };
 
   render() {
-    const { laws } = this.state;
+    const { laws : allLaws, searchQuery } = this.state;
+
+    const laws = searchQuery ? allLaws.filter(law => {
+      return law.lawTitle.toLowerCase().includes(searchQuery.toLowerCase());
+    }) : allLaws
+
     return (
       <div className="bg-maxims">
         <div className="container p-4">
           <div className="h1 text-center text-white">Legal Maxims</div>
 
           <div className="my-5 col-lg-8 col">
-            <Search onChange={this.handlerSearch} />
+            <Search onSearch={this.handlerSearch} />
           </div>
           {laws.map((law) => (
             <div
