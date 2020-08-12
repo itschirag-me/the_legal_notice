@@ -49,7 +49,7 @@ class Blogs extends Component {
               {blogs.map((blog) => (
                 <div
                   key={blog._id}
-                  className="shadow bg-light p-lg-4 p-4 mx-lg-5 mb-5 rounded"
+                  className="shadow bg-light p-lg-4 p-2 mx-lg-5 mb-5 rounded"
                 >
                   {/* <div className="w-100 text-right">
                     <a onClick={()=>onDelete(blog._id)} style={{ cursor: "pointer" }} className="p-2">
@@ -59,7 +59,7 @@ class Blogs extends Component {
                     </a>
                   </div> */}
                   <div className="h3 text-center">{blog.title}</div>
-                  <div className="h5 text-center p-3">{blog.posts}</div>
+                  <div className="h5 text-justiry p-lg-3">{blog.posts}</div>
                   <div className="text-right">
                     <i>
                       {blog.category.name} by <b>{blog.name}</b>
