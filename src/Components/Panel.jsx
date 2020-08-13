@@ -12,7 +12,7 @@ const Panel = ({ panel }) => {
         </div>
         <div className="col-lg-5 col-12 mx-auto w-100 row-3">
           <iframe
-            className="w-100 h-100"
+            className="w-100 h-100 border-0"
             src={panel.link}
             title="Panel Discussion"
           ></iframe>

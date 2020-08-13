@@ -56,7 +56,7 @@ class Blogs extends Component {
     const { blogs, currentCategory, category } = this.getPageData();
 
     return (
-      <div className="bg-about py-lg-0 py-4">
+      <div className="bg-blogs py-lg-0 py-4">
         <div className="p-lg-5 p-3">
           <div className="container my-5 col-lg-8 col">
             <Search onSearch={this.handlerSearch} />

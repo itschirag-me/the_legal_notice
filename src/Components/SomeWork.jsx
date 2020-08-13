@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "./common/Card";
+import { Link } from 'react-router-dom';
 
 const SomeWork = ({ data }) => {
   return (
@@ -8,9 +9,9 @@ const SomeWork = ({ data }) => {
           <div className="h2 text-center text-white">Some of our work</div><hr />
         <div className="row">
           {data.map((info) => (
-              <div key={info.id} className="col-lg-4 col-12 mx-auto p-4">
+              <Link key={info.id} to={info.link} className="nav-link col-lg-4 col-12 mx-auto p-4 text-secondary">
                 <Card title={info.title} image={info.image} description={info.description} />
-              </div>
+              </Link>
           ))}
         </div>
       </div>

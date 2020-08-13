@@ -12,6 +12,7 @@ import LegalAdvice from "./Components/LegalAdvice";
 import LegalDrafting from "./Components/LegalDrafting";
 import LegalMaxims from "./Components/LegalMaxims";
 import LegalUpdates from "./Components/LegalUpdates";
+import ContactUs from './Components/ContactUs';
 
 Axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 
@@ -53,9 +54,10 @@ class App extends Component {
               onClick={this.handlerBodyToggle}
             >
               <Switch>
+                <Route path="/contact-us" component={ContactUs} />
                 <Route path="/legal-updates" component={LegalUpdates} />
                 <Route path="/legal-maxims" component={LegalMaxims} />
-                <Route path="/legal-aid" component={LegalAdvice} />
+                <Route path="/legal-adivce" component={LegalAdvice} />
                 <Route path="/legal-drafting" component={LegalDrafting} />
                 <Route path="/about" component={About} />
                 <Route

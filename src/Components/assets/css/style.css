@@ -65,17 +65,23 @@
   background-repeat: no-repeat;
 }
 
+.bg-blogs {
+  background-image: url("../image/legal-contract-1024x640.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
 .hr-custom {
-  border : 0.4px solid white !important;
+  border: 0.4px solid white !important;
 }
 
 .w-img {
-  width : 100px;
-  height : 100px;
+  width: 100px;
+  height: 100px;
 }
 
 .m-nt {
-  margin-top : -50px;
+  margin-top: -50px;
 }
 
 .btn-blue {
@@ -101,7 +107,7 @@
 
 .focus:focus {
   background-color: white;
-  color : #6b757d;
+  color: #6b757d;
 }
 
 .bg-legal {
@@ -118,6 +124,16 @@
 
 .bg-maxims {
   background-image: url("../image/Legal-Maxims.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+.row-10 {
+  height: 1350px;
+}
+
+.bg-contact-us {
+  background-image: url("../image/bg-contact-us.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
 }
