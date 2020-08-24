@@ -4,6 +4,7 @@ import Panel from "./Panel";
 const ClientCounceling = () => {
   const panels = [
     {
+      id : 0,
       description:
         "The Legal Notice brings to you an interactive session between a Domestic Violence victim, her brother and an advocate wherein Free Legal Aid was provided. The Client approached us through a connection and we further connected him to the advocate who agreed to our terms.",
       subTitle:
@@ -11,6 +12,7 @@ const ClientCounceling = () => {
       link: "https://www.youtube.com/embed/G0jGZoVq-1I",
     },
     {
+      id : 1,
       description:
         "The Legal Notice brings an interactive session between a client and a lawyer wherein free legal aid was provided. The client approached us through some connections and we connected him to a lawyer who agreed to our terms. It is a landlord and tenant dispute.",
       subTitle:
@@ -24,7 +26,9 @@ const ClientCounceling = () => {
         <div className="h3 text-center text-white">Client Councelling</div>
         <hr />
         {panels.map((panel) => (
-          <Panel panel={panel} />
+          <div key={panel.id}>
+            <Panel panel={panel} />
+          </div>
         ))}
       </div>
     </div>

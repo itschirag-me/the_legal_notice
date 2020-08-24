@@ -46,7 +46,6 @@ class NavItems extends Component {
               >
                 <a
                   onClick={onLinkToggle}
-                  activeClassName="bg-light text-secondary rounded"
                   onClick={this.handlerDropDown}
                   className="dropdown-item p-3 focus text-secondary rounded-bottom d-flex"
                   target="_blank"
@@ -57,7 +56,6 @@ class NavItems extends Component {
                 </a>
                 <NavLink
                   onClick={onLinkToggle}
-                  activeClassName="bg-light text-secondary rounded"
                   onClick={this.handlerDropDown}
                   className="dropdown-item p-3 focus text-secondary rounded-top d-flex"
                   to="blogs"
@@ -70,7 +68,6 @@ class NavItems extends Component {
                 <NavLink
                   onClick={onLinkToggle}
                   onClick={this.handlerDropDown}
-                  activeClassName="bg-light text-secondary rounded"
                   className="dropdown-item p-3 focus text-secondary d-flex"
                   to="client-councelling"
                 >
@@ -81,7 +78,6 @@ class NavItems extends Component {
                 </NavLink>
                 <NavLink
                   onClick={onLinkToggle}
-                  activeClassName="bg-light text-secondary rounded"
                   onClick={this.handlerDropDown}
                   className="dropdown-item p-3 focus text-secondary rounded-bottom d-flex"
                   to="legal-maxims"
@@ -93,7 +89,6 @@ class NavItems extends Component {
                 </NavLink>
                 <NavLink
                   onClick={onLinkToggle}
-                  activeClassName="bg-light text-secondary rounded"
                   onClick={this.handlerDropDown}
                   className="dropdown-item p-3 focus text-secondary rounded-bottom d-flex"
                   to="legal-updates"
@@ -103,7 +98,6 @@ class NavItems extends Component {
                 </NavLink>
                 <NavLink
                   onClick={onLinkToggle}
-                  activeClassName="bg-light text-secondary rounded"
                   onClick={this.handlerDropDown}
                   className="dropdown-item p-3 focus text-secondary rounded-bottom d-flex"
                   to="legal-adivce"

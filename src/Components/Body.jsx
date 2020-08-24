@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import tnl_2 from "./assets/image/tln_02.jpg";
+import tnl_2 from "./assets/image/tln_02.png";
 import SomeWork from "./SomeWork";
 import Home from "./partials/Home";
 import Panel from "./Panel";
