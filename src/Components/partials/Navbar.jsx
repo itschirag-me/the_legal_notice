@@ -1,12 +1,12 @@
 import React from "react";
 import NavbarItems from "./NavItems";
-import Logo from "../assets/image/logo/logo1.png"
+import Logo from "../assets/image/logo/logo1.png";
 import { Link } from "react-router-dom";
 
-const Navbar = ({ onToggle, currentRoute , onLinkToggle }) => {
+const Navbar = ({ onToggle, currentRoute, onLinkToggle }) => {
   return (
     <div className="w-100">
-      <nav className="container navbar navbar-expand-lg navbar-secondary bg-white">
+      <nav className="navbar navbar-expand-lg navbar-secondary bg-white shadow-sm">
         <Link className="navbar-brand" to="">
           <img src={Logo} width="100" height="65" alt="Logo" />
         </Link>

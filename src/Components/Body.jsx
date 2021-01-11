@@ -64,7 +64,7 @@ class Body extends Component {
       link: "https://www.youtube.com/embed/JopmZOqN8Gk",
     };
     return (
-      <div>
+      <div className="mt-5">
         <Home image={tnl_2} />
         <SomeWork data={data} />
         <div className="px-3">
